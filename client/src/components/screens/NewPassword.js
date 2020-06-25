@@ -43,7 +43,6 @@ import M from "materialize-css"
      value={password}
       onChange={(e) => setPassword(e.target.value)}
       />
-    
     <button className="btn waves-effect waves-light "
      type="submit" name="action" onClick={()=>{PostData()}}>
     Update Password
