@@ -28,4 +28,4 @@ const userschema=new mongoose.Schema({
         ref:"users"
     }]
 })
-//mongoose.model("users",userschema);
+mongoose.model("users",userschema);
