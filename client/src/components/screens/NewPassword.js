@@ -52,4 +52,4 @@ import M from "materialize-css"
     </div></div>
 )
  }
- //export default NewPass;
+export default NewPass;
