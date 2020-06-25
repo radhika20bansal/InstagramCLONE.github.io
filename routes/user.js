@@ -58,15 +58,15 @@ Router.put('/unfollow',requireLogIn,(req,res)=>{
     })
 })
 
-Router.put('/updatepic',requireLogIn,(req,res)=>{
-    User.findByIdAndUpdate(
-        req.user._id
-    ,{$set:{pic:req.body.pic}},{new:true},
-    (err,result)=>{
-        if(err){
-            return res.status(422).json({error:"Cannot Post pic"})
-        }
-        res.json(result)
-    }
-)})
+// Router.put('/updatepic',requireLogIn,(req,res)=>{
+//     User.findByIdAndUpdate(
+//         req.user._id
+//     ,{$set:{pic:req.body.pic}},{new:true},
+//     (err,result)=>{
+//         if(err){
+//             return res.status(422).json({error:"Cannot Post pic"})
+//         }
+//         res.json(result)
+//     }
+// )})
 module.exports = Router
