@@ -123,30 +123,30 @@ Router.post('/reset-password',(req,res)=>{
   })
 })
 
-// Router.post('/new-password',(req,res)=>{
-//   const NewPAssword=req.body.password
-//   const senttoken=req.body.token
-//   User.findOne({
-//     resetToken:senttoken
-//     ,
-//     expireToken:{$gt:Date.now()}
-//   }).then(user=>{
-//     if(!user){
-//       return res.status(422).json({error:"Session has Expired!! Try Again"})
-//     }
-//     bcrypt.hash(NewPAssword,12).then(hashedPassword=>{
-//       user.password=hashedPassword
-//       user.resetToken=undefined
-//       user.expireToken=undefined
-//       user.save().then(savedRecord=>{
-//         res.json({message:"PAssword Updated Succesfully"})
-//       })
-//     }).catch(err=>{
-//       console.log(err);
+Router.post('/new-password',(req,res)=>{
+  const NewPAssword=req.body.password
+  const senttoken=req.body.token
+  User.findOne({
+    resetToken:senttoken
+    ,
+    expireToken:{$gt:Date.now()}
+  }).then(user=>{
+    if(!user){
+      return res.status(422).json({error:"Session has Expired!! Try Again"})
+    }
+    bcrypt.hash(NewPAssword,12).then(hashedPassword=>{
+      user.password=hashedPassword
+      user.resetToken=undefined
+      user.expireToken=undefined
+      user.save().then(savedRecord=>{
+        res.json({message:"PAssword Updated Succesfully"})
+      })
+    }).catch(err=>{
+      console.log(err);
       
-//     })
-//   })
-// })
+    })
+  })
+})
 module.exports = Router;
 
 
