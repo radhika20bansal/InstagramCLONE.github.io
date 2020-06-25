@@ -8,6 +8,7 @@
 #### ❓ Authentication : Token Based Authentication
 ## For  Pictorial EXpeience :
 ![](https://github.com/poojarathore30/InstagramCLONE.github.io/blob/master/profile.PNG)
+![](https://github.com/poojarathore30/InstagramCLONE.github.io/blob/master/HomeP.PNG)
 ![](https://github.com/poojarathore30/InstagramCLONE.github.io/blob/master/Home.PNG)
 ![](https://github.com/poojarathore30/InstagramCLONE.github.io/blob/master/User.PNG)
 ![](https://github.com/poojarathore30/InstagramCLONE.github.io/blob/master/SignUp.PNG)
